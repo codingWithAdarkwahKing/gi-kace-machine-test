@@ -1,0 +1,14 @@
+{% extends 'base2.html' %}
+
+{% block title %}Unauthorized Access{% endblock %}
+
+{% block content %}
+  <div class="container mt-5">
+    <h1 class="text-center">Unauthorized Access</h1>
+    <p class="text-center">You do not have permission to access this page.</p>
+    <!-- Add content specific to the teacher-only page here -->
+    <div class="text-center">
+      <a href="{% url 'personal:home' %}" class="btn btn-lg btn-success">Return Home</a>
+    </div>
+  </div>
+{% endblock %}

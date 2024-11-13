@@ -1,0 +1,169 @@
+{% load static %}
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two&display=swap');
+
+:root {
+  /* Colors */
+  --white: #ffffff;
+  --soft-gray-for-text: #959191;
+  --online-grean: #7cd366;
+  --bg-colour: #f5f5f5;
+  --text-color: #3d3b3b;
+  --black: #000000;
+  --bg-gray: #f3f4f6;
+  --bg-blue: #0d6efd;
+  --bg-gray-deep: #d7d7d7;
+  --bg-green:#D0DE95;
+  --system-ui: system-ui, "Segoe UI", Roboto, Helvetica, Ubuntu, Noto Sans, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+
+  --navbrand-color:#333;
+  --light-gray-color: #f2f2f2;
+  --dark-gray: #333;
+  --text-softwhite: #ffffffd9;
+  --bg-blue: #00008b;
+  --light-gray-bg:#f2f2f2;
+  /* Fonts */
+
+  /* Effects */
+}
+
+[data-bs-theme="dark"] {
+    --white: #212529;
+    --soft-gray-for-text: #6b6b6b;
+    --online-grean: #5eb360;
+    --bg-colour: #1e1e1e;
+    --text-color: #e0e0e0;
+    --black: #ffffff;
+    --bg-gray: #282828;
+    --bg-blue: #0d6efd;
+    --bg-gray-deep: #999999;
+    --bg-green: #698f49;
+
+    --navbrand-color:#fff;
+    --light-gray-color: #282828;
+    --dark-gray: #e0e0e0;
+    --text-softwhite: #ffffff80;
+    --bg-blue: #212529;
+    --light-gray-bg:#212529;
+
+    /* ... update other color variables for dark mode ... */
+}
+[data-bs-theme="dark"] .textDarkmode {
+    color:var(--text-color);
+}
+
+
+body{
+  background-color:#f5f5f5;
+  margin: 0%;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: var(--system-ui);
+  color: var(--text-color);
+
+}
+
+
+.navbar-brand {
+    font-family: 'Lobster Two', cursive;
+    font-weight: bold;
+    font-size: 4rem;
+    color: var(--navbrand-color);
+}
+
+
+[data-bs-theme="dark"] .bg-light {
+  background-color: #2b3035 !important;
+    <!-- #212529-->
+}
+[data-bs-theme="dark"] .bg-white {
+  background-color: #2b3035 !important;
+}
+a{
+    text-decoration:none
+}
+
+.text-grey{
+  color: rgb(43, 45, 50);
+}
+[data-bs-theme="dark"] .text-grey {
+  color: #b0bec5; /* Light Blue Grey color */
+}
+
+.bg-blue{
+  background-color: #15293e;
+}
+[data-bs-theme="dark"] .bg-blue {
+    background-color: #2b3035 !important;
+}
+
+
+/* .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    max-width: 700px;
+    margin: 0 auto;
+  } */
+.screenwhole{
+  height: 100vh;
+}
+
+.alignit{
+  align-self: flex-start;
+}
+
+.sidepic{
+  background-image: url('{% static 'OpenBook.jpg' %}');
+  background-size: cover;
+  background-position: center;
+
+}
+[data-bs-theme="dark"] .sidepic {
+ background-image: url('{% static 'darkmode.jpg' %}');
+  background-size: cover;
+  background-position: center;
+}
+
+
+  .footer {
+    background-color: #f8f9fa;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 14px;
+    color: #777;
+  }
+
+  .footer p {
+    margin: 0;
+  }
+
+
+.formsmall{
+  padding: 5rem;
+}
+
+.bigform{
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+
+@media (max-width: 575.98px) {
+  .formsmall{
+    padding: 0;
+    margin: 0;
+  }
+
+  .bigform{
+    padding: 0%;
+  }
+  .screenwhole{
+    height: 0;
+    min-height: 120vh;
+  }
+
+ }
+
+
+</style>

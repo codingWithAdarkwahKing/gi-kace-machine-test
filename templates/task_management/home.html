@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+{% include 'task_management/snippets/home_css.html' %} 
+
+    <main class="mainblur">
+        <div class="homescreen imgmain w-100">
+            <h1 class="text-white bigfont">Welcome to Your Task Management System</h1>
+            <p class="text-white">This is the place where you can manage your task programs with ease.</p>
+            {% if user.is_authenticated %}
+                <form action="{% url 'accounts:logout' %}" method="post">
+                    {% csrf_token %}
+                    <button type="submit" class="btn btn-primary btn-lg mb-3">Logout</button>
+                </form>
+            {% else %}
+                <p class="mt-4">Please <a href="{% url 'accounts:login' %}">login</a> to get started.</p>
+            {% endif %}
+        </div>
+    </main>
+{% endblock %}

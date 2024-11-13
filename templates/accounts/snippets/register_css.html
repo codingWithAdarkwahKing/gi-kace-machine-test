@@ -1,0 +1,36 @@
+{% load static %}
+
+<style type="text/css">
+    .homescreen {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      width:100%;
+      margin: 0 auto;
+      flex-direction: column;
+      text-align: center;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .mainblur{
+        background-image: url('{% static 'homePageBg.jpeg' %}');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        backdrop-filter: blur(8px);
+    }
+
+    .footer {
+        padding: 20px 0;
+        text-align: center;
+        font-size: 14px;
+        color: #777;
+      }
+    .bg-blue{
+        background-color: #15293e;
+    }
+    .bigfont{
+        font-size: 5rem;
+    }
+</style>
