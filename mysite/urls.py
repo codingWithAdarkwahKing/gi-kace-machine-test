@@ -27,6 +27,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('accounts.urls')),
     path('api/', include('task_management.urls')),
+    path('news/', include('news_management.urls')),
 
 ]
 
