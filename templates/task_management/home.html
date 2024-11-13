@@ -13,6 +13,7 @@
                     {% csrf_token %}
                     <button type="submit" class="btn btn-primary btn-lg mb-3">Logout</button>
                 </form>
+                <a href="{% url 'task_management:task-list' %}" class="btn btn-success btn-lg">Create a New Task</a>
             {% else %}
                 <p class="mt-4">Please <a href="{% url 'accounts:login' %}">login</a> to get started.</p>
             {% endif %}

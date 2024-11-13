@@ -10,5 +10,5 @@ router.register(r'tasks', TaskViewSet, basename='task')
 
 urlpatterns = [
     path('home/', views.home_view, name='home'),
-    path('', include(router.urls)),
+    path('', include(router.urls), name='api'),
 ]

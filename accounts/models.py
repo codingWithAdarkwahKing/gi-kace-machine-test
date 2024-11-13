@@ -68,3 +68,26 @@ class Account(AbstractBaseUser):
 
 
 User = get_user_model()
+
+
+class EmailChangeRequest(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    new_email = models.EmailField()
+    token = models.CharField(max_length=100, unique=True)
+    timestamp = models.DateTimeField(auto_now_add=True)
+    email_confirmed = models.BooleanField(default=False)
+
+    def __str__(self):
+        return f"Email Change Request for {self.user.email} to {self.new_email}"
+
+
+class EmailConfirmation(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    new_email = models.EmailField()
+    token = models.CharField(max_length=100, unique=True)
+    timestamp = models.DateTimeField(auto_now_add=True)
+    email_confirmed = models.BooleanField(default=False)
+    uid = models.CharField(max_length=100, unique=True)
+
+    def __str__(self):
+        return f"Confirmation for {self.user.username}"
